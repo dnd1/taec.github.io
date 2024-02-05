@@ -10,7 +10,12 @@ const Nav: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Image width="80" height="80" alt="dnd tech logo" src="/tuaec.png" />
+        <Image
+          width="80"
+          height="80"
+          alt="dnd tech logo"
+          src="/taec.github.io/tuaec.png"
+        />
       </motion.span>
       <motion.div
         initial={{ x: "100vh" }}
