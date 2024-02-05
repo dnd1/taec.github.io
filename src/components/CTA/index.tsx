@@ -17,7 +17,10 @@ const textVariants: Variants = {
   },
 };
 
-const CTA: React.FC<{ single?: boolean }> = ({ single = true }) => {
+const CTA: React.FC<{ text?: string; single?: boolean }> = ({
+  single = true,
+  text,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,9 +34,7 @@ const CTA: React.FC<{ single?: boolean }> = ({ single = true }) => {
           </motion.button>
         )}
         <a href="https://calendly.com/danielrvt88/30min">
-          <motion.button variants={textVariants}>
-            Schedule a call now
-          </motion.button>
+          <motion.button variants={textVariants}>{text}</motion.button>
         </a>
       </motion.div>
     </motion.div>

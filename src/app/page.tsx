@@ -17,9 +17,9 @@ export default function Home() {
         <section>
           <Nav />
           <Hero
-            title="Transform Your Business with a High-Converting Landing Page and Irresistible Offer"
-            subtitle=""
-            slider="Unleash the power of a highly-converting landing page"
+            title="Descarga GRATIS la gu&iacute;a para acuaristas aficionados"
+            subtitle="y no cometas estos x errores!"
+            slider="descarga ya, gratis"
           />
         </section>
         <Bullets />

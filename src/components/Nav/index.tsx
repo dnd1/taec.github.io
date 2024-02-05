@@ -10,19 +10,16 @@ const Nav: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Image
-          width="80"
-          height="80"
-          alt="dnd tech logo"
-          src="/DND-TECH-logo-square.png"
-        />
+        <Image width="80" height="80" alt="dnd tech logo" src="/tuaec.png" />
       </motion.span>
       <motion.div
         initial={{ x: "100vh" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-right text-xs">Get a landing page that converts</p>
+        <p className="text-right text-xs">
+          Todo lo que necesitas saber de acuarios!
+        </p>
       </motion.div>
     </div>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./styles.scss";
 import { Variants, motion } from "framer-motion";
 import CTA from "../CTA";
+import SignupForm from "../SignupForm";
 
 const textVariants: Variants = {
   initial: {
@@ -57,19 +58,20 @@ const Hero: React.FC<{
           animate="animate"
         >
           <motion.h2 className="text-sm" variants={textVariants}>
-            GET A
+            OBT&Eacute;NLA YA
           </motion.h2>
-          <motion.div variants={textVariants}>
+          <SignupForm />
+          {/* <motion.div variants={textVariants}>
             <motion.h1 className="mx-10" variants={textVariants}>
-              High-Converting Landing Page
+              {title}{" "}
             </motion.h1>
             <motion.h3 className="mx-10 " variants={textVariants}>
-              so good your visitors can&apos;t say no to it
+              {subtitle}
             </motion.h3>
           </motion.div>
           <motion.div variants={textVariants} className="buttons z-10">
-            <CTA />
-          </motion.div>
+            <CTA text="Quiero mi guía" />
+          </motion.div> */}
           <motion.img
             className="place-self-start pb-8"
             variants={textVariants}
