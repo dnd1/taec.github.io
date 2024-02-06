@@ -20,7 +20,7 @@ const SignupForm: React.FC = () => {
           id="mce-EMAIL"
           required
         />
-        {/* <span id="mce-EMAIL-HELPERTEXT" className="helper_text" /> */}
+
         <input
           type="text"
           name="b_3e43830f28e088056107984ef_a50870a666"
@@ -31,7 +31,7 @@ const SignupForm: React.FC = () => {
           type="submit"
           name="subscribe"
           id="mc-embedded-subscribe"
-          className="bg-red-500 text-center cursor-pointer xs:w-full xs:min-w-full min-w-[180px] p-2 ml-2 xs:mt-2 xs:ml-0 rounded-md text-xl xs:text-sm text-gray-200 z-10"
+          className="bg-red-500 text-center cursor-pointer xs:w-full xs:min-w-full min-w-[180px] p-2 ml-2 xs:mt-2 xs:ml-0 rounded-md text-xl xs:text-xs text-gray-200 z-10"
           value="Subscribirme"
         />
       </div>
