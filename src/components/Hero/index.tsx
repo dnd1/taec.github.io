@@ -4,6 +4,7 @@ import "./styles.scss";
 import { Variants, motion } from "framer-motion";
 import CTA from "../CTA";
 import SignupForm from "../SignupForm";
+import YoutubeEmbed from "../Nav/YoutubeEmbed";
 
 const textVariants: Variants = {
   initial: {
@@ -52,33 +53,35 @@ const Hero: React.FC<{
     <div className="hero">
       <div className="wrapper">
         <motion.div
-          className="flex flex-col justify-between pt-4 items-center textContainer h-full"
+          className="flex flex-col justify-start items-center textContainer h-full xs:w-full"
           variants={textVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.h2 className="text-sm" variants={textVariants}>
-            OBT&Eacute;NLA YA
-          </motion.h2>
-          <SignupForm />
-          {/* <motion.div variants={textVariants}>
-            <motion.h1 className="mx-10" variants={textVariants}>
-              {title}{" "}
-            </motion.h1>
-            <motion.h3 className="mx-10 " variants={textVariants}>
-              {subtitle}
-            </motion.h3>
+          <motion.div
+            className="text-sm w-3/4 lg:w-1/2"
+            variants={textVariants}
+          >
+            <YoutubeEmbed embed="gSD_bk4Euao" />
           </motion.div>
-          <motion.div variants={textVariants} className="buttons z-10">
-            <CTA text="Quiero mi guía" />
-          </motion.div> */}
-          <motion.img
+          <motion.h1 className="text-sm w-3/4 lg:w-1/2" variants={textVariants}>
+            Suscríbete y te enviaremos la guía al correo
+          </motion.h1>
+
+          <motion.div
+            className="text-sm w-3/4 lg:w-1/2"
+            variants={textVariants}
+          >
+            <SignupForm />
+          </motion.div>
+
+          {/* <motion.img
             className="place-self-start pb-8"
             variants={textVariants}
             animate="scrollButton"
             src="/scroll.png"
             alt=""
-          />
+          /> */}
         </motion.div>
       </div>
       <motion.div

@@ -7,7 +7,7 @@ const SignupForm: React.FC = () => {
       action="https://dndtech.us8.list-manage.com/subscribe/post?u=3e43830f28e088056107984ef&amp;id=a50870a666&amp;f_id=003601e0f0"
       method="post"
       // id="mc-embedded-subscribe-form"
-      className="w-3/4 z-10"
+      className="w-full z-10"
       name="mc-embedded-subscribe-form"
       target="_blank"
     >
@@ -16,6 +16,7 @@ const SignupForm: React.FC = () => {
           type="email"
           name="EMAIL"
           className="bg-gray-200 rounded-md p-2 w-full xs:text-sm  text-md"
+          placeholder="Email"
           id="mce-EMAIL"
           required
         />
