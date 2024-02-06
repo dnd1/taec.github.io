@@ -4,29 +4,24 @@ import "./styles.scss";
 const SignupForm: React.FC = () => {
   return (
     <form
-      action="https://dndtech.us8.list-manage.com/subscribe/post?u=3e43830f28e088056107984ef&amp;id=a50870a666&amp;f_id=003601e0f0"
+      action="https://assets.mailerlite.com/jsonp/733625/forms/107649145365333893/subscribe"
+      data-code=""
       method="post"
-      // id="mc-embedded-subscribe-form"
       className="w-full z-10"
-      name="mc-embedded-subscribe-form"
       target="_blank"
     >
       <div className="flex flex-row justify-center items-center xs:flex-wrap z-10 mb-20">
         <input
           type="email"
-          name="EMAIL"
+          name="fields[email]"
           className="bg-gray-200 rounded-md p-2 w-full xs:text-sm  text-md z-10"
           placeholder="Email"
           id="mce-EMAIL"
           required
         />
 
-        <input
-          type="text"
-          name="b_3e43830f28e088056107984ef_a50870a666"
-          className="hidden"
-          tabIndex={-1}
-        />
+        <input type="hidden" name="ml-submit" value="1" />
+
         <input
           type="submit"
           name="subscribe"
@@ -35,6 +30,8 @@ const SignupForm: React.FC = () => {
           value="Subscribirme"
         />
       </div>
+
+      <input type="hidden" name="anticsrf" value="true" />
     </form>
   );
 };

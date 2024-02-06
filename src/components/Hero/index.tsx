@@ -52,25 +52,24 @@ const Hero: React.FC<{
     <div className="hero">
       <div className="wrapper">
         <motion.div
-          className="flex flex-col justify-evenly items-center textContainer h-full xs:w-full "
+          className="flex flex-col justify-stretch items-center textContainer h-full xs:w-full "
           variants={textVariants}
           initial="initial"
           animate="animate"
         >
+          {/* lg:w-1/2 w-3/4 */}
           <motion.h1
-            className="text-sm w-3/4 xs:w-full lg:w-1/2 xs:px-8"
+            className="text-2xl text-center mt:10  xs:w-full  xs:px-8"
             variants={textVariants}
           >
-            {title}{" "}
+            {title}
           </motion.h1>
-
           <motion.div
             className="text-sm w-3/4 xs:w-full lg:w-1/2"
             variants={textVariants}
           >
             <YoutubeEmbed embed="gSD_bk4Euao" />
           </motion.div>
-
           <motion.div
             className="text-sm w-3/4 lg:w-1/2 xs:w-full xs:px-8"
             variants={textVariants}
