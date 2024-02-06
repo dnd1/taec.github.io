@@ -9,7 +9,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Craft a Highly Converting Landing Page",
+  title: "Todo lo que nevesitas saber para tu acuario",
   description: "by DND TECH",
 };
 
@@ -20,7 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        {children}
+        <p className="flex justify-center">
+          by &nbsp; <a href="https://dndtech.co">DND TECH</a> &nbsp;{" "}
+          {new Date().getFullYear()}
+        </p>
+      </body>
     </html>
   );
 }
