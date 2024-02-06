@@ -11,11 +11,11 @@ const SignupForm: React.FC = () => {
       name="mc-embedded-subscribe-form"
       target="_blank"
     >
-      <div className="flex flex-row justify-center items-center xs:flex-wrap">
+      <div className="flex flex-row justify-center items-center xs:flex-wrap z-10 mb-20">
         <input
           type="email"
           name="EMAIL"
-          className="bg-gray-200 rounded-md p-2 w-full xs:text-sm  text-md"
+          className="bg-gray-200 rounded-md p-2 w-full xs:text-sm  text-md z-10"
           placeholder="Email"
           id="mce-EMAIL"
           required
@@ -31,7 +31,7 @@ const SignupForm: React.FC = () => {
           type="submit"
           name="subscribe"
           id="mc-embedded-subscribe"
-          className="bg-red-500 text-center cursor-pointer xs:w-full xs:min-w-full min-w-[180px] p-2 ml-2 xs:mt-2 xs:ml-0 rounded-md text-xl xs:text-sm text-gray-200"
+          className="bg-red-500 text-center cursor-pointer xs:w-full xs:min-w-full min-w-[180px] p-2 ml-2 xs:mt-2 xs:ml-0 rounded-md text-xl xs:text-sm text-gray-200 z-10"
           value="Subscribirme"
         />
       </div>

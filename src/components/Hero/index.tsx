@@ -2,9 +2,8 @@
 import Image from "next/image";
 import "./styles.scss";
 import { Variants, motion } from "framer-motion";
-import CTA from "../CTA";
 import SignupForm from "../SignupForm";
-import YoutubeEmbed from "../Nav/YoutubeEmbed";
+import YoutubeEmbed from "../YoutubeEmbed";
 
 const textVariants: Variants = {
   initial: {
@@ -58,12 +57,6 @@ const Hero: React.FC<{
           initial="initial"
           animate="animate"
         >
-          <motion.div
-            className="text-sm w-3/4 lg:w-1/2"
-            variants={textVariants}
-          >
-            <YoutubeEmbed embed="gSD_bk4Euao" />
-          </motion.div>
           <motion.h1 className="text-sm w-3/4 lg:w-1/2" variants={textVariants}>
             Suscríbete y te enviaremos la guía al correo
           </motion.h1>
@@ -72,16 +65,15 @@ const Hero: React.FC<{
             className="text-sm w-3/4 lg:w-1/2"
             variants={textVariants}
           >
-            <SignupForm />
+            <YoutubeEmbed embed="gSD_bk4Euao" />
           </motion.div>
 
-          {/* <motion.img
-            className="place-self-start pb-8"
+          <motion.div
+            className="text-sm w-3/4 lg:w-1/2"
             variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          /> */}
+          >
+            <SignupForm />
+          </motion.div>
         </motion.div>
       </div>
       <motion.div

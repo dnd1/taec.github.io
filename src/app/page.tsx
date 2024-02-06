@@ -22,21 +22,6 @@ export default function Home() {
             slider="descarga ya, gratis"
           />
         </section>
-        <Bullets />
-        <div className="flex justify-center pt-12">
-          <CTA />
-        </div>
-        <Problem />
-        <Agitation />
-        <Solution />
-        <div className="flex justify-center">
-          <CTA />
-        </div>
-        <Bonuses />
-        <Guarantee />
-        <div className="flex justify-center pb-12">
-          <CTA />
-        </div>
       </div>
     </div>
   );
