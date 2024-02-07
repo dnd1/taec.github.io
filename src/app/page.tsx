@@ -8,7 +8,7 @@ export default function Home() {
     <section>
       <Nav />
       <Hero
-        title="Suscríbete y te enviaremos la guía al correo"
+        title="Descarga la guía gratuita"
         slider="descarga ya gratis ahora"
       />
     </section>
