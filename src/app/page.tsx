@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Roboto } from "next/font/google";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 

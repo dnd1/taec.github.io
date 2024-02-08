@@ -14,18 +14,23 @@ const SignupForm: React.FC = () => {
 
     if (!email) return;
 
+    let formData = new FormData();
+    formData.append("fields[email]", email);
+
     fetch(
       "https://assets.mailerlite.com/jsonp/733625/forms/107649145365333893/subscribe",
-      { method: "post" }
-    ).then((res) => {
-      if (res.status < 200 || res.status > 299) {
-        setStatus("ERROR");
-        return;
-      }
+      { method: "post", body: formData }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        if (!res?.success) {
+          setStatus("ERROR");
+          return;
+        }
 
-      setEmail("");
-      setStatus("OK");
-    });
+        setEmail("");
+        setStatus("OK");
+      });
   };
 
   return (
@@ -73,7 +78,7 @@ const SignupForm: React.FC = () => {
           />
         </div>
 
-        <input type="hidden" name="anticsrf" value="true" />
+        <input type="hidden" name="anticsrf" id="anticsrf" value="true" />
       </form>
     </div>
   );
