@@ -47,7 +47,8 @@ const Hero: React.FC<{
   title?: string;
   slider?: string;
   subtitle?: string;
-}> = ({ title, subtitle, slider }) => {
+  videoId?: string;
+}> = ({ title, subtitle, slider, videoId }) => {
   return (
     <div className="hero">
       <div className="wrapper">
@@ -68,7 +69,7 @@ const Hero: React.FC<{
             className="text-sm w-3/4 xs:w-full lg:w-1/2"
             variants={textVariants}
           >
-            <YoutubeEmbed embed="gSD_bk4Euao" />
+            <YoutubeEmbed embed={videoId ?? "gSD_bk4Euao"} />
           </motion.div>
           <motion.div
             className="text-sm w-3/4 lg:w-1/2 xs:w-full xs:px-8"
