@@ -48,7 +48,8 @@ const Hero: React.FC<{
   slider?: string;
   subtitle?: string;
   videoId?: string;
-}> = ({ title, subtitle, slider, videoId }) => {
+  emailActionUrl?: string;
+}> = ({ title, subtitle, slider, videoId, emailActionUrl }) => {
   return (
     <div className="hero">
       <div className="wrapper">
@@ -75,7 +76,7 @@ const Hero: React.FC<{
             className="text-sm w-3/4 lg:w-1/2 xs:w-full xs:px-8"
             variants={textVariants}
           >
-            <SignupForm />
+            <SignupForm actionUrl={emailActionUrl} />
           </motion.div>
         </motion.div>
       </div>

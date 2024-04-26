@@ -1,7 +1,9 @@
 import * as React from "react";
 import "./styles.scss";
 
-const SignupForm: React.FC = () => {
+const SignupForm: React.FC<{ actionUrl?: string }> = ({
+  actionUrl = "https://assets.mailerlite.com/jsonp/733625/forms/107649145365333893/subscribe",
+}) => {
   const [email, setEmail] = React.useState<string>("");
   const [status, setStatus] = React.useState<string | undefined>();
 
@@ -17,10 +19,7 @@ const SignupForm: React.FC = () => {
     let formData = new FormData();
     formData.append("fields[email]", email);
 
-    fetch(
-      "https://assets.mailerlite.com/jsonp/733625/forms/107649145365333893/subscribe",
-      { method: "post", body: formData }
-    )
+    fetch(actionUrl, { method: "post", body: formData })
       .then((res) => res.json())
       .then((res) => {
         if (!res?.success) {
@@ -36,7 +35,8 @@ const SignupForm: React.FC = () => {
   return (
     <div>
       <form
-        action="https://assets.mailerlite.com/jsonp/733625/forms/107649145365333893/subscribe"
+        // MEZCLAS: "https://assets.mailerlite.com/jsonp/733625/forms/119696636780742471/subscribe"
+        action={actionUrl}
         data-code=""
         method="post"
         className="w-full z-10"
